@@ -1,6 +1,6 @@
 # Philipp Metz — Website
 
-Personal portfolio website of **Philipp Metz**, built from scratch with React, Vite, and modern Vanilla CSS.
+Personal website of **Philipp Metz**, built from scratch with React, Vite, and modern Vanilla CSS.
 
 ## ✨ Features & Sections
 

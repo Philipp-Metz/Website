@@ -1,0 +1,115 @@
+.intro {
+  width: 100%;
+  min-height: calc(100svh - 150px);
+  padding-block: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+
+.intro-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.intro-text {
+  font-family: var(--sans);
+  color: var(--text);
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: left;
+  max-width: 540px;
+}
+
+.intro-title {
+  font-family: var(--heading);
+  color: var(--headline);
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1.1;
+  font-weight: 400;
+  margin: 0;
+}
+
+.intro-name {
+  font-family: var(--heading);
+  color: var(--highlight);
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.intro-cursor {
+  color: var(--highlight);
+  display: inline-block;
+  font-family: var(--heading);
+  font-size: inherit;
+  font-weight: 400;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-cursor {
+    animation: none;
+  }
+}
+
+.intro-ascii {
+  color: var(--highlight);
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+.intro-button {
+  background-color: transparent;
+  border: 1px solid var(--highlight);
+  text-align: center;
+  color: var(--highlight);
+  font-family: var(--sans);
+  font-size: 16px;
+  gap: 10px;
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 24px;
+  border-radius: 6px;
+  align-self: flex-start;
+  margin-top: 8px;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.intro-button:hover,
+.intro-button:focus-visible {
+  background-color: rgba(100, 255, 218, 0.1);
+  color: var(--highlight);
+}
+
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: auto;
+    padding-block: 40px;
+    gap: 32px;
+  }
+}

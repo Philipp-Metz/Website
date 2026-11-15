@@ -1,0 +1,139 @@
+.experience-list {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.experience-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 220px;
+  border-left: 2px solid var(--bg-highlight);
+  padding-left: 8px;
+}
+
+.experience-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background-color: var(--bg-highlight);
+  border: none;
+  border-left: 3px solid transparent;
+  border-radius: 4px;
+  padding: 12px 20px;
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--text);
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.experience-tab-position {
+  color: inherit;
+}
+
+.experience-tab-company {
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.experience-tab:hover,
+.experience-tab:focus-visible {
+  background-color: rgba(100, 255, 218, 0.08);
+  color: var(--highlight);
+  outline: none;
+}
+
+.experience-tab.active {
+  color: var(--highlight);
+  border-left-color: var(--highlight);
+  background-color: rgba(100, 255, 218, 0.14);
+}
+
+.experience-panel {
+  flex: 1;
+  min-height: 260px;
+}
+
+.experience-role {
+  font-family: var(--heading);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--headline);
+  margin: 0 0 6px;
+}
+
+.experience-company {
+  color: var(--highlight);
+  font-family: var(--heading);
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.experience-duration {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.experience-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.experience-points li {
+  position: relative;
+  padding-left: 24px;
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.experience-points li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--highlight);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .experience-list {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .experience-tabs {
+    flex-direction: row;
+    min-width: 100%;
+    overflow-x: auto;
+    border-left: none;
+    border-bottom: 2px solid var(--bg-highlight);
+    padding-left: 0;
+    padding-bottom: 8px;
+  }
+
+  .experience-tab {
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+  }
+
+  .experience-tab.active {
+    border-left-color: transparent;
+    border-bottom-color: var(--highlight);
+  }
+}

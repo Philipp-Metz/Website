@@ -1,0 +1,35 @@
+section[id] {
+  scroll-margin-top: 60px;
+}
+
+main {
+  width: 100%;
+  max-width: 1000px;
+  margin-inline: auto;
+  padding: 40px 24px;
+  flex: 1;
+}
+
+.section {
+  padding-block: 80px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1.1;
+  font-weight: 400;
+  font-family: var(--heading);
+  color: var(--headline);
+}
+
+.section-title::after {
+  content: "";
+  flex: 1;
+  max-width: 300px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: var(--bg-highlight);
+}
